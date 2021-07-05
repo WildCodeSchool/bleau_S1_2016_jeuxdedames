@@ -1,0 +1,24 @@
+MobileBundle\Entity\MobileList:
+    type: entity
+    table: null
+    repositoryClass: MobileBundle\Repository\MobileListRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateDebut:
+            type: date
+        dateFin:
+            type: date
+
+    manyToOne:
+        artistess:
+          targetEntity: CmsBundle\Entity\Artiste
+          joinColumn:
+            name: artiste_id
+            referencedColumnName: id
+
+    lifecycleCallbacks: {  }

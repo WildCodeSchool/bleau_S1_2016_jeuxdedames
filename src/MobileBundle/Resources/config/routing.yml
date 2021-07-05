@@ -1,0 +1,31 @@
+mobile_mobilelist:
+    resource: "@MobileBundle/Resources/config/routing/mobilelist.yml"
+    prefix:   /admin/mobilelist
+
+mobile_homepage:
+    path:     /mobile
+    defaults: { _controller: MobileBundle:Default:getJson }
+    methods:  GET
+    options:
+        expose: true
+
+mobile_events:
+    path:     /mobile/events
+    defaults: { _controller: MobileBundle:Default:getJsonevents }
+    methods:  GET
+    options:
+        expose: true
+
+mobile_job:
+    path:     /mobile/job
+    defaults: { _controller: MobileBundle:Default:getJsonJob }
+    methods:  GET
+    options:
+        expose: true
+
+mobile_commercant:
+    path:     /mobile/partner
+    defaults: { _controller: MobileBundle:Default:getJsonCommercant }
+    methods:  GET
+    options:
+        expose: true
